@@ -39,11 +39,6 @@ export default function PlayerTurnPage() {
   if (!theme || !currentQuestion) {
     return <div>Chargement en cours...</div>;
   }
-
-  // Décodage de la liste des joueurs
-  const players: string[] = JSON.parse(playersParam);
-  const currentPlayerIndex = players.indexOf(currentPlayer);
-
   // Gestion des actions
   const numberOfDrinks = currentQuestion.difficulty; // Déterminer le nombre de gorgées
 
