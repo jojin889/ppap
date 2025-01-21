@@ -28,7 +28,7 @@ export default function AnswerPage() {
   }
 
   const nextPlayer = parsedPlayers[(currentPlayerIndex + 1) % parsedPlayers.length];
-  
+
   const goToHome = () => {
     router.push('/');
   };
@@ -62,7 +62,7 @@ export default function AnswerPage() {
           onClick={goToHome}
           className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
         >
-          Retour à l'accueil
+          Retour à l&apos;accueil
         </button>
       </div>
     </div>

@@ -8,16 +8,11 @@ type QuestionCardProps = {
 };
 
 export default function QuestionCard({ theme }: QuestionCardProps) {
-  const [difficulty, setDifficulty] = useState<number | null>(null);
   const router = useRouter();
 
   const handleSelectQuestion = (difficulty: number) => {
     router.push(`/game/answer?theme=${theme}&difficulty=${difficulty}`);
   };
-
-  useEffect(() => {
-    setDifficulty(null); // Reset difficulty when theme changes
-  }, [theme]);
 
   return (
     <div className="space-y-4">
