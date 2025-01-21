@@ -12,7 +12,7 @@ export default function AnswerPage() {
   const players = searchParams.get('players');  // Liste des joueurs
 
   if (!players) {
-    return <div>Erreur : Liste des joueurs manquante dans l'URL.</div>;
+    return <div>Erreur : Liste des joueurs manquante dans l&apos;URL.</div>;
   }
 
   const parsedPlayers = JSON.parse(players || '[]');

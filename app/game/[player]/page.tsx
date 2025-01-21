@@ -12,7 +12,7 @@ export default function PlayerTurnPage() {
   
   // Si les joueurs ne sont pas présents, renvoyer une erreur
   if (!playersParam || !currentPlayer) {
-    return <div>Erreur : Liste des joueurs ou joueur manquant dans l'URL.</div>;
+    return <div>Erreur : Liste des joueurs ou joueur manquant dans l&apos;URL.</div>;
   }
 
   const players = JSON.parse(playersParam); // Décoder la liste des joueurs
@@ -42,13 +42,13 @@ export default function PlayerTurnPage() {
   const numberOfDrinks = currentQuestion.difficulty; // Par exemple, utiliser la difficulté comme nombre de gorgées
 
   // Passer au joueur suivant
-  const goToNextPlayer = () => {
-    const nextPlayerIndex = (currentPlayerIndex + 1) % players.length; // On fait une rotation entre les joueurs
-    const nextPlayer = players[nextPlayerIndex];
+  // const goToNextPlayer = () => {
+  //   const nextPlayerIndex = (currentPlayerIndex + 1) % players.length; // On fait une rotation entre les joueurs
+  //   const nextPlayer = players[nextPlayerIndex];
 
-    // Rediriger vers la page du joueur suivant avec son nom dans l'URL
-    router.push(`/game/player?name=${encodeURIComponent(nextPlayer)}&players=${encodeURIComponent(playersParam)}`);
-  };
+  //   // Rediriger vers la page du joueur suivant avec son nom dans l'URL
+  //   router.push(`/game/player?name=${encodeURIComponent(nextPlayer)}&players=${encodeURIComponent(playersParam)}`);
+  // };
 
   // Rediriger vers la page de réponse
   const goToAnswerPage = () => {
