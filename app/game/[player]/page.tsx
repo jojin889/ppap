@@ -15,8 +15,6 @@ export default function PlayerTurnPage() {
     return <div>Erreur : Liste des joueurs ou joueur manquant dans l&apos;URL.</div>;
   }
 
-  const players = JSON.parse(playersParam); // Décoder la liste des joueurs
-  const currentPlayerIndex = players.indexOf(currentPlayer); // Trouver l'index du joueur actuel
 
   const [theme, setTheme] = useState<Theme | null>(null); // L'état est initialisé à null
   const [currentQuestion, setCurrentQuestion] = useState<any | null>(null); // Question actuelle
